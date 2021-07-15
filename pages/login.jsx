@@ -52,6 +52,7 @@ const Login = () => {
             >
               <Input />
             </Form.Item>
+
             <p className="label">Password</p>
             <Form.Item
               name="password"

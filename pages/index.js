@@ -9,6 +9,7 @@ import moment from "moment";
 import Link from "next/link";
 import PureCard from "../components/pureCard";
 import MainLayout from "../components/MainLayout";
+import { RightOutlined } from "@ant-design/icons";
 
 const Home = () => {
   const [categories, setCategories] = useState();
@@ -28,7 +29,25 @@ const Home = () => {
   return (
     <>
       <RouteProtect>
-        <MainLayout title="Home" subTitle="Categories">
+        <MainLayout title="FikraCamps Shop">
+          <div className="hero-container">
+            <div className="left">
+              <span className="hero-type-wrapper">
+                <h1 className="hero-type">
+                  Welcome to <p className="hero-type main-color">FikraCamps</p>{" "}
+                  Shop!
+                </h1>
+              </span>
+              <Button size="large" className="hero-cta" type="primary">
+                Start Shopping Now!
+                <RightOutlined className="my-icon" />
+              </Button>
+            </div>
+            <div className="right">
+              <img src="./images/hero.svg" alt="" />
+            </div>
+          </div>
+
           <div className="home-content">
             {!!categories ? (
               categories?.[0].map((e) => (
